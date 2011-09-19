@@ -1,0 +1,38 @@
+body {
+	background-color: #ccc;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+}
+
+p {
+	line-height: 1.5em;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+#header h1 {
+	color: #666;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 3em;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#content {
+	
+	width: 800px;
+	margin: 0 auto 20px auto;
+	padding: 10px 20px;
+	background-color: white;
+}
+
+#footer {
+	color: #666;
+	text-align: center;
+}
+
+#footer a:link, #footer a:visited {
+	color: #666;
+}
