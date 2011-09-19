@@ -1,6 +1,7 @@
 server: true
 auto: true
 pygments: true
+permalink: ./:title
 source: .
 destination: ./_site
 plugins: ./_plugins
