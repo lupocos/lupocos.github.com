@@ -34,7 +34,7 @@ While Scan Tailor is not strictly required to run the Homer bash script, you may
 
 Let us know if you manage to make it run!
 
- [test-images-donwload]: http://dl.dropbox.com/u/189038/#
+ [test-images-donwload]: http://dl.dropbox.com/u/189038/Homer-test-images.zip
  [23]: http://code.google.com/p/tesseract-ocr/ "Tesseract OCR"
  [24]: http://en.wikipedia.org/wiki/HOCR "hOCR (from Wikipedia)"
  [25]: http://rubygems.org/gems/pdfbeads "PDFbeads | RubyGems.org"
