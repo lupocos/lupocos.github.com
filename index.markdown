@@ -4,6 +4,7 @@ title: Home
 ---
 
 Homer is a package of hardware and software that provides an inexpensive and efficient solution to scan books. 
+
 <p>
 	<iframe src="http://player.vimeo.com/video/28263829?title=0&amp;byline=0&amp;portrait=0" width="560" height="308" frameborder="0" webkitallowfullscreen="" allowfullscreen=""></iframe>
 </p>
