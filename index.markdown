@@ -5,8 +5,10 @@ title: Home
 
 Homer is a package of hardware and software that provides an inexpensive and efficient solution to scan books. 
 
-<object width="600" height="330"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=28263829&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=28263829&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="600" height="330"></embed></object>
- <p><a href="http://vimeo.com/28263829">Homer, a nod to the Gutenberg press</a> from <a href="http://vimeo.com/sojournposse">Sojournposse</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<iframe src="http://player.vimeo.com/video/28263829?title=0&amp;byline=0&amp;portrait=0" width="400" height="220" frameborder="0" webkitAllowFullScreen allowFullScreen> </iframe>
+ 
+<p><a href="http://vimeo.com/28263829">Homer, a nod to the Gutenberg press</a> from <a href="http://vimeo.com/sojournposse">Sojournposse</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
 
 The "prototype" is based on a [previous model][1] developed by [Daniel Reetz][3] and [Matti Kariluoma][4]. Dan is also the founder of an online community of hackers sharing their knowledge and passion for [do-it-yourself book scanning][2], which is where we drew most of our original inspiration.
 

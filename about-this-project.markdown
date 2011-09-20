@@ -4,6 +4,8 @@ title: About this project
 ---
 # About this project #
 
+<iframe width="560" height="315" src="http://www.youtube.com/embed/UHmkgcuHZ8Q" frameborder="0" allowfullscreen> </iframe>
+
 Office scanners are made to copy office papers, not books. It is hard to fit correctly a book page and you also risk damaging the book.
 
 There are commercial solutions today that simplify the process of digitalising books while lowering the chances of damage. Most of these make use of digital cameras, combined with some kind of software that converts the photos into readable documents. However, these solutions don't work for all cameras and their prices put them beyond the reach of the average consumer.

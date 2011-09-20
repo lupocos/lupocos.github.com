@@ -12,227 +12,232 @@
 	<div id="site_title"><h1>Homer, the DIY Book Scanner</h1></div>
 </div>
 <div id="content">
-	<h1 id='documentation'>Documentation</h1>
+	<h1 id="documentation">Documentation</h1>
 
-<h2 id='homer_bash_script'>Homer bash script</h2>
+<h2 id="homer-bash-script">Homer bash script</h2>
 
-<p>(Download link for the standalone script: <a href='http://dl.dropbox.com/u/189038/homer.sh' title='Homer bash script v1.0beta1'>homer.sh</a>)</p>
+<p>(Download link for the standalone script: <a href="http://dl.dropbox.com/u/189038/homer.sh" title="Homer bash script v1.0beta1">homer.sh</a>)</p>
 
-<p>The script loads a directory of images which is expected to contain 2n images, and applies to them a series of manipulations. If no arguments are entered, the script returns the &#8220;Usage&#8221; info:</p>
+<p>The script loads a directory of images which is expected to contain 2n images, and applies to them a series of manipulations. If no arguments are entered, the script returns the &ldquo;Usage&rdquo; info: </p>
 
-<pre><code>Usage: homer /path/to/input/directory [-r, -R, -L, -l \&quot;lang\&quot;] [-o \&quot;output\&quot;]&quot;
+<pre><code>Usage: homer /path/to/input/directory [-r, -R, -L, -l \"lang\"] [-o \"output\"]"
 
 Options:
--r, --rename&quot; 
-	rename the first half of the files with incremental odd numbers, the second&quot;
-	half with incremental even numbers (JPEG only);&quot;
--R, --right&quot; 
-	rename (as above) and rotate the right-hand pages 90 degrees clockwise, and&quot;
-	the left-hand pages 90 degrees counterclockwise, starting from the RIGHT &quot;
-	pages (JPEG only);&quot;
--L, --left&quot; 
-	rename and rotate (as above) starting from the LEFT pages (JPEG only);&quot;
--l, --lang&quot; 
-	run Tesseract OCR and convert the images into a searchable PDF (TIFF only),&quot;
-	type \&quot;homer -l\&quot; (or \&quot;--lang\&quot;) to view the list of supported languages;&quot;
--o, --output&quot;
-	for [-r, -R, -L], the output is the path to the directory where the renamed&quot;
-   	    images should be saved (default is \$1/renamed);&quot;
-	for [-l], the output is the path to the final PDF, or its filename (default&quot; 
-    	is \$PWD/out.pdf).&quot;</code></pre>
+-r, --rename" 
+	rename the first half of the files with incremental odd numbers, the second"
+	half with incremental even numbers (JPEG only);"
+-R, --right" 
+	rename (as above) and rotate the right-hand pages 90 degrees clockwise, and"
+	the left-hand pages 90 degrees counterclockwise, starting from the RIGHT "
+	pages (JPEG only);"
+-L, --left" 
+	rename and rotate (as above) starting from the LEFT pages (JPEG only);"
+-l, --lang" 
+	run Tesseract OCR and convert the images into a searchable PDF (TIFF only),"
+	type \"homer -l\" (or \"--lang\") to view the list of supported languages;"
+-o, --output"
+	for [-r, -R, -L], the output is the path to the directory where the renamed"
+   	    images should be saved (default is \$1/renamed);"
+	for [-l], the output is the path to the final PDF, or its filename (default" 
+    	is \$PWD/out.pdf)."
+</code></pre>
 
-<p>If only the first argument (i.e., the input directory) is entered, the script prompts the user to select whether to rename &amp; rotate, simply rename, or run OCR engine and converting to PDF.</p>
+<p>If only the first argument (i.e., the input directory) is entered, the script prompts the user to select whether to rename &amp; rotate, simply rename, or run OCR engine and converting to PDF.  </p>
 
-<p>The options <code>-R</code>, <code>-L</code>, and <code>-r</code> allow to reorder a batch of JPEG images such that the first half and the second half are interspersed: that is, the first half is renamed with incremental odd numbers, while the second half is renamed with incremental even numbers.</p>
+<p>The options <code>-R</code>, <code>-L</code>, and <code>-r</code> allow to reorder a batch of JPEG images such that the first half and the second half are interspersed: that is, the first half is renamed with incremental odd numbers, while the second half is renamed with incremental even numbers.  </p>
 
-<p>The options <code>-R</code> and <code>-L</code> allow to fix the orientation of the JPEG images, by rotating the pages on the right-hand side of book 90 degrees clockwise, and those on the left-hand side of the book 90 degrees counterclockwise.</p>
+<p>The options <code>-R</code> and <code>-L</code> allow to fix the orientation of the JPEG images, by rotating the pages on the right-hand side of book 90 degrees clockwise, and those on the left-hand side of the book 90 degrees counterclockwise.  </p>
 
-<p>Finally, the option <code>-l</code> runs &#8220;Tesseract OCR&#8221; to extract the text from a batch of TIFF images, and then uses &#8220;PDFbeads&#8221; to bind the images and the text into a single, searchable PDF. The <code>-l</code> option must be followed by the three-character label for the desired Tesseract language. To print the list of supported languages with their correspondni glabels, you can type <code>homer -l</code> or <code>homer --lang</code>.</p>
+<p>Finally, the option <code>-l</code> runs &ldquo;Tesseract OCR&rdquo; to extract the text from a batch of TIFF images, and then uses &ldquo;PDFbeads&rdquo; to bind the images and the text into a single, searchable PDF. The <code>-l</code> option must be followed by the three-character label for the desired Tesseract language. To print the list of supported languages with their correspondni glabels, you can type <code>homer -l</code> or <code>homer --lang</code>.</p>
 
-<p>The <code>-o</code> option allows to specify the output location of the renamed/rotated files (a new folder will be created if it doesn&#8217;t exist), the location where to save the final PDF document (saved as &#8220;out.pdf&#8221; if the no filename is specified); or the name of the PDF file (the *.pdf extension appended to the filename is not necessary but will be added automatically if not entered by the user). The option accepts both absolute and relative paths.</p>
+<p>The <code>-o</code> option allows to specify the output location of the renamed/rotated files (a new folder will be created if it doesn&rsquo;t exist), the location where to save the final PDF document (saved as &ldquo;out.pdf&rdquo; if the no filename is specified); or the name of the PDF file (the *.pdf extension appended to the filename is not necessary but will be added automatically if not entered by the user). The option accepts both absolute and relative paths.</p>
 
-<p>The renaming/rotating bit of the script is inspired by Matti Kariluoma and his <a href='http://www.mattikariluoma.com/files/RenameAll.exe' title='RenameAll.exe | Matti Kariluoma'>&#8220;RenameAll.exe&#8221;</a> script, which he wrote for the already mentioned <a href='http://www.instructables.com/id/Bargain-Price-Book-Scanner-From-A-Cardboard-Box/' title='Bargain-Price Book Scanner From A Cardboard Box (from Instructables.com'>Cardboard Bookscanner</a> project appeared on Instructables.com.</p>
+<p>The renaming/rotating bit of the script is inspired by Matti Kariluoma and his <a href="http://www.mattikariluoma.com/files/RenameAll.exe" title="RenameAll.exe | Matti Kariluoma">&ldquo;RenameAll.exe&rdquo;</a> script, which he wrote for the already mentioned <a href="http://www.instructables.com/id/Bargain-Price-Book-Scanner-From-A-Cardboard-Box/" title="Bargain-Price Book Scanner From A Cardboard Box (from Instructables.com)">Cardboard Bookscanner</a> project appeared on Instructables.com.</p>
 
-<h2 id='homer_installer_for_mac'>Homer installer for Mac</h2>
+<h2 id="homer-installer-for-mac">Homer installer for Mac</h2>
 
-<p>(download script: <a href='http://dl.dropbox.com/u/189038/install.command.txt' title='Homer installer script for Mac'>install.command</a>)</p>
+<p>(download script: <a href="http://dl.dropbox.com/u/189038/install.command.txt" title="Homer installer script for Mac">install.command</a>)</p>
 
-<p>The installation script <code>install.command</code> found inside the Homer disk image was written in bash and made executable by typing <code>chmod 755</code> and appending the <code>.command</code> extension in the filename. When the user double-clicks on it, Mac OS X automatically opens the Terminal.app window and runs the script. Depending on the ownership and permissions of the <code>/usr/local</code> folder, the script may require the user to authenticate as admin.</p>
+<p>The installation script <code>install.command</code> found inside the Homer disk image was written in bash and made executable by typing <code>chmod 755</code> and appending the <code>.command</code> extension in the filename. When the user double-clicks on it, Mac OS X automatically opens the Terminal.app window and runs the script. Depending on the ownership and permissions of the <code>/usr/local</code> folder, the script may require the user to authenticate as admin. </p>
 
-<p>The script runs the a modified version of <code>homebrew.rb</code> installaiton script to allow an offline installation. That is, instead of downloading the tarball from GitHub, the script untars a local archive <code>mxcl-homebrew-3545a8d.tar.gz</code>, pre-downloaded from GitHub and included in the Homer installation package. If you wish to update homebrew to the latest version simply type <code>brew update</code> in the Terminal.app.</p>
+<p>The script runs the a  modified version of <code>homebrew.rb</code> installaiton script to allow an offline installation. That is, instead of downloading the tarball from GitHub, the script untars a local archive <code>mxcl-homebrew-3545a8d.tar.gz</code>, pre-downloaded from GitHub and included in the Homer installation package. If you wish to update homebrew to the latest version simply type <code>brew update</code> in the Terminal.app. </p>
 
-<p>Most of the included hombrew &#8220;formulas&#8221; would require XCode &#8211; i.e. Apple&#8217;s OSX Developer Tools &#8211; in order to be compiled from their source code. However, we decided to distribute pre-compiled binaries along with the Homer package for Mac, so that you won&#8217;t necessarily need to install XCode to run the Homer script on your Mac. To compile them we used Homebrew and XCode 4.1 running OS X 10.6.8 and 10.7.1, respectively for the Snow Leopard&#8217;s and Lion&#8217;s version of the Homer installer for Mac, which thus comprise two different packages for the two latest version of the OSX. We couldn&#8217;t compile it for Mac OS X 10.5 Leopard, as the latter is not compatible with the MacBook Air. For the same reason, the software included is compatible only with Intel Macs like the Air, and not also for older PowerPC Macs. If you manage to compile it with older versions of OS X and older architectures, you are welcome to share here with us the results.</p>
+<p>Most of the included hombrew &ldquo;formulas&rdquo; would require XCode &ndash; i.e. Apple&rsquo;s OSX Developer Tools &ndash; in order to be compiled from their source code. However, we decided to distribute pre-compiled binaries along with the Homer package for Mac, so that you won&rsquo;t necessarily need to install XCode to run the Homer script on your Mac. To compile them we used Homebrew and XCode 4.1 running OS X 10.6.8 and 10.7.1, respectively for the Snow Leopard&rsquo;s and Lion&rsquo;s version of the Homer installer for Mac, which thus comprise two different packages for the two latest version of the OSX. We couldn&rsquo;t compile it for Mac OS X 10.5 Leopard, as the latter is not compatible with the MacBook Air. For the same reason, the software included is compatible only with Intel Macs like the Air, and not also for older PowerPC Macs. If you manage to compile it with older versions of OS X and older architectures, you are welcome to share here with us the results.</p>
 
-<p>The package also include some pre-compiled Ruby gems (see the list below). However, these are not installed in the default <code>/Library/Ruby/Gems/1.8</code> folder, which is owned by <code>root:wheel</code> and would thus require another <code>sudo</code>, but inside Homebrew&#8217;s <code>Cellar</code> directory in the <code>/usr/local</code> folder, whose group ownership is set to <code>admin</code> by Homebrew installation script, and therefore does not require the super user privileges (provided the user actually belongs to <code>admin</code> group). To this purpose, a RubyGem plugin called <a href='https://github.com/indirect/brewbygems' title='indirect/brewbygems - GitHub'>Brewbygems</a> is installed. This adds post-install and post-uninstall hooks to RubyGems that update the symlinks in your Homebrew <code>/usr/local/bin/</code> folder. The user&#8217;s RubyGems prefix is also changed to <code>/usr/local/Cellar/gems/1.8</code> by adding the corresponding <code>$GEM_HOME</code> variable to the <code>~/.bashrc</code> profile, so that every time you <code>gem install</code> anything you will no longer need to <code>sudo</code>.</p>
+<p>The package also include some pre-compiled Ruby gems (see the list below). However, these are not installed in the default <code>/Library/Ruby/Gems/1.8</code> folder, which is owned by <code>root:wheel</code> and would thus require another <code>sudo</code>, but inside Homebrew&rsquo;s <code>Cellar</code> directory in the <code>/usr/local</code> folder, whose group ownership is set to <code>admin</code> by Homebrew installation script, and therefore does not require the super user privileges (provided the user actually belongs to <code>admin</code> group). To this purpose, a RubyGem plugin called <a href="https://github.com/indirect/brewbygems" title="indirect/brewbygems - GitHub">Brewbygems</a> is installed. This adds post-install and post-uninstall hooks to RubyGems that update the symlinks in your Homebrew <code>/usr/local/bin/</code> folder. The user&rsquo;s RubyGems prefix is also changed to <code>/usr/local/Cellar/gems/1.8</code> by adding the corresponding <code>$GEM_HOME</code> variable to the <code>~/.bashrc</code> profile, so that every time you <code>gem install</code> anything you will no longer need to <code>sudo</code>.</p>
 
-<p>Please note that if you have already another copy of Homebrew installed in <code>/usr/local</code>, or if you have installed any of the following programs with another package manager (e.g., MacPorts, Fink, etc.), but you still want to use the automatic installer, then it is advisable to completely remove all those programs before running the Homer installer, to avoid unexpected errors or conflicts. Alternatively, you can install the various programs manually and then download the standalone Homer bash script from <a href='http://dl.dropbox.com/u/189038/homer.sh' title='Homer bash script v1.0beta1'>here</a>.</p>
+<p>Please note that if you have already another copy of Homebrew installed in <code>/usr/local</code>, or if you have installed any of the following programs with another package manager (e.g., MacPorts, Fink, etc.), but you still want to use the automatic installer, then it is advisable to completely remove all those programs before running the Homer installer, to avoid unexpected errors or conflicts. Alternatively, you can install the various programs manually and then download the standalone Homer bash script from <a href="http://dl.dropbox.com/u/189038/homer.sh" title="Homer bash script v1.0beta1">here</a>. </p>
 
-<h3 id='software_included'>Software included</h3>
+<h3 id="software-included">Software included</h3>
 
 <p>The installation script installs the following programs into the specified locations:</p>
 
 <ul>
-<li>
-<p><a href='http://mxcl.github.com/homebrew/' title='Homebrew - MacPorts driving you to drink? Try Hombrew!'><strong>Homebrew</strong></a>, the missing package manager for OS X:</p>
+  <li>
+    <p><a href="http://mxcl.github.com/homebrew/" title="Homebrew - MacPorts driving you to drink? Try Hombrew!"><strong>Homebrew</strong></a>, the missing package manager for OS X: </p>
 
-<pre><code>  /usr/local/bin/brew
+    <pre><code>  /usr/local/bin/brew
   /usr/local/Library/Formula/...
-  /usr/local/Library/Homebrew/...</code></pre>
-</li>
+  /usr/local/Library/Homebrew/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://www.imagemagick.org/script/index.php" title="ImageMagick.org"><strong>ImageMagick</strong></a>, open source software suite for manipulating images, with its dependencies (version 6.7.1-1, binaries compiled through Homebrew): </p>
 
-<li>
-<p><a href='http://www.imagemagick.org/script/index.php' title='ImageMagick.org'><strong>ImageMagick</strong></a>, open source software suite for manipulating images, with its dependencies (version 6.7.1-1, binaries compiled through Homebrew):</p>
-
-<pre><code>  /usr/local/Cellar/imagemagick/6.7.1-1/...
+    <pre><code>  /usr/local/Cellar/imagemagick/6.7.1-1/...
   /usr/local/Cellar/jpeg/8c/...
   /usr/local/Cellar/jasper/1.900.1/...
   /usr/local/Cellar/little-cms/1.19/...
-  /usr/local/Cellar/libtiff/3.9.5/...</code></pre>
-</li>
+  /usr/local/Cellar/libtiff/3.9.5/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="https://github.com/agl/jbig2enc" title="agl/jbig2enc - GitHub"><strong>JBIG2 encoder</strong></a>, compression tool for bi-level images (binary compiled through Homebrew):</p>
 
-<li>
-<p><a href='https://github.com/agl/jbig2enc' title='agl/jbig2enc - GitHub'><strong>JBIG2 encoder</strong></a>, compression tool for bi-level images (binary compiled through Homebrew):</p>
+    <pre><code>  /usr/local/Cellar/jbig2enc/0.27-17b36fa/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://code.google.com/p/tesseract-ocr/" title="Tesseract OCR"><strong>Tesseract-ORC</strong></a>, free open source OCR engine sponsored by Google, with Leptonica library for enhanced image processing (version 3.00, binary compiled through Homebrew): </p>
 
-<pre><code>  /usr/local/Cellar/jbig2enc/0.27-17b36fa/...</code></pre>
-</li>
+    <pre><code>  /usr/local/Cellar/tesseract/3.00/...
+  /usr/local/Cellar/leptonica/1.68/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="https://github.com/indirect/brewbygems" title="indirect/brewbygems - GitHub"><strong>Brewbygems</strong></a>, making RubyGems and Homebrew play nice together:</p>
 
-<li>
-<p><a href='http://code.google.com/p/tesseract-ocr/' title='Tesseract OCR'><strong>Tesseract-ORC</strong></a>, free open source OCR engine sponsored by Google, with Leptonica library for enhanced image processing (version 3.00, binary compiled through Homebrew):</p>
+    <pre><code>  /usr/local/Cellar/gems/1.8/gems/brewbygems-0.4.0/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rubygems.org/gems/hpricot" title="Hpricot | RubyGems.org"><strong>Hpricot</strong></a>, HTML parser (pre-compiled Ruby gem):</p>
 
-<pre><code>  /usr/local/Cellar/tesseract/3.00/...
-  /usr/local/Cellar/leptonica/1.68/...</code></pre>
-</li>
+    <pre><code>  /usr/local/Cellar/gems/1.8/gems/hpricot-0.8.4/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rmagick.rubyforge.org/" title="RMagick Download Page"><strong>RMagick</strong></a>, interface between the Ruby programming language and ImageMagick (pre-compiled Ruby gem):	</p>
 
-<li>
-<p><a href='https://github.com/indirect/brewbygems' title='indirect/brewbygems - GitHub'><strong>Brewbygems</strong></a>, making RubyGems and Homebrew play nice together:</p>
+    <pre><code>  /usr/local/Cellar/gems/1.8/gems/rmagick-2.13.1/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rubygems.org/gems/pdfbeads" title="PDFbeads | RubyGems.org"><strong>pdfbeads</strong></a>, Ruby utility to create searchable PDF:</p>
 
-<pre><code>  /usr/local/Cellar/gems/1.8/gems/brewbygems-0.4.0/...</code></pre>
-</li>
+    <pre><code>  /usr/local/Cellar/gems/1.8/bin/pdfbeads
+  /usr/local/Cellar/gems/1.8/gems/pdfbeads-1.0.3/...
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://scantailor.sourceforge.net/" title="About | Scan Tailor"><strong>Scan Tailor</strong></a>, interactive post-processing tool for scanned pages (version 1.0.0beta11 with experimental &ldquo;Dewarping&rdquo; support):</p>
 
-<li>
-<p><a href='http://rubygems.org/gems/hpricot' title='Hpricot | RubyGems.org'><strong>Hpricot</strong></a>, HTML parser (pre-compiled Ruby gem):</p>
+    <pre><code>  /Applications/ScanTailor.app
+</code></pre>
+  </li>
+  <li>
+    <p><a href="/how-to-process-the-images"><strong>Homer</strong></a>, command-line script and GUI app (made with Automator) for renaming, rotating and binding scanned pages:</p>
 
-<pre><code>  /usr/local/Cellar/gems/1.8/gems/hpricot-0.8.4/...</code></pre>
-</li>
-
-<li>
-<p><a href='http://rmagick.rubyforge.org/' title='RMagick Download Page'><strong>RMagick</strong></a>, interface between the Ruby programming language and ImageMagick (pre-compiled Ruby gem):</p>
-
-<pre><code>  /usr/local/Cellar/gems/1.8/gems/rmagick-2.13.1/...</code></pre>
-</li>
-
-<li>
-<p><a href='http://rubygems.org/gems/pdfbeads' title='PDFbeads | RubyGems.org'><strong>pdfbeads</strong></a>, Ruby utility to create searchable PDF:</p>
-
-<pre><code>  /usr/local/Cellar/gems/1.8/bin/pdfbeads
-  /usr/local/Cellar/gems/1.8/gems/pdfbeads-1.0.3/...</code></pre>
-</li>
-
-<li>
-<p><a href='http://scantailor.sourceforge.net/' title='About | Scan Tailor'><strong>Scan Tailor</strong></a>, interactive post-processing tool for scanned pages (version 1.0.0beta11 with experimental &#8220;Dewarping&#8221; support):</p>
-
-<pre><code>  /Applications/ScanTailor.app</code></pre>
-</li>
-
-<li>
-<p><a href='/how-to-process-the-images'><strong>Homer</strong></a>, command-line script and GUI app (made with Automator) for renaming, rotating and binding scanned pages:</p>
-
-<pre><code>  /usr/local/bin/homer
-  /Applications/Homer/Homer.app</code></pre>
-</li>
+    <pre><code>  /usr/local/bin/homer
+  /Applications/Homer/Homer.app
+</code></pre>
+  </li>
 </ul>
 
-<h2 id='homer_installer_for_windows'>Homer installer for Windows</h2>
+<h2 id="homer-installer-for-windows">Homer installer for Windows</h2>
 
-<p>(download script: <a href='http://dl.dropbox.com/u/189038/Homer-Install.au3.txt' title='Homer-Install.au3'>Homer-Install.au3</a>)</p>
+<p>(download script: <a href="http://dl.dropbox.com/u/189038/Homer-Install.au3.txt" title="Homer-Install.au3">Homer-Install.au3</a>)</p>
 
-<p>The installation script <code>Homer-install-exe</code> for Windows was made using <a href='http://www.autoitscript.com/site/' title='AutoItScript Website'>AutoIT v3</a>, a freeware BASIC-like scripting language designed for automating the Windows GUI. The installation script for Windows takes longer to complete than its Mac counterpart, as some of the programs to install need in this case to be compiled from source. Also, the script may require administrative privileges to run depending on the installed Windows OS version (&#8220;User Account Control&#8221; is enabled by default on Windows Vista and Windows 7).</p>
+<p>The installation script <code>Homer-install-exe</code> for Windows was made using <a href="http://www.autoitscript.com/site/" title="AutoItScript Website">AutoIT v3</a>, a freeware BASIC-like scripting language designed for automating the Windows GUI. The installation script for Windows takes longer to complete than its Mac counterpart, as some of the programs to install need in this case to be compiled from source. Also, the script may require administrative privileges to run depending on the installed Windows OS version (&ldquo;User Account Control&rdquo; is enabled by default on Windows Vista and Windows 7).</p>
 
-<p>AutoIT scripts allows to interact with the Windows GUI in the same way a user would do with his or her cursor and keyboard. We could have told the user to download each program and install through its own installer (when available, like in most cases for Windows programs). But we decided to make the procedure even easier, by automating the whole setup trough a &#8220;unattended&#8221; installation script. The user will only need to click &#8220;Install&#8221; once and then wait for the installation to complete.</p>
+<p>AutoIT scripts allows to interact with the Windows GUI in the same way a user would do with his or her cursor and keyboard. We could have told the user to download each program and install through its own installer (when available, like in most cases for Windows programs). But we decided to make the procedure even easier, by automating the whole setup trough a &ldquo;unattended&rdquo; installation script. The user will only need to click &ldquo;Install&rdquo; once and then wait for the installation to complete.</p>
 
-<p>The Homer script was originally written in Bash, which comes pre-installed in OSX and Linux, but not in Windows. Moreover, PDFbeads &#8211; the utility to convert the images into PDF &#8211; requires Ruby, which again is not pre-installed on Windows. Finally, PDFbeads requires two other Ruby gems (hpricot and RMagick) which need to be compiled from source with the developer tools. The solution to these problems is to install the <a href='https://github.com/oneclick/rubyinstaller/wiki/Development-Kit' title='Development Kit - GitHub'>Development Kit</a> provided by the RubyInstaller project: the Ruby DevKit for Windows is based upon <a href='http://www.mingw.org/' title='Minimalist GNU for Windows'>MSYS and MinGW</a>, which not only provide development tools to build native Ruby extensions or &#8220;gem&#8221;, but also include the Bash command line interpreter system. This allows Windows users to run the same Homer bash script inside Windows Command Prompt.</p>
+<p>The Homer script was originally written in Bash, which comes pre-installed in OSX and Linux, but not in Windows. Moreover, PDFbeads &ndash; the utility to convert the images into PDF &ndash; requires Ruby, which again is not pre-installed on Windows. Finally, PDFbeads requires two other Ruby gems (hpricot and RMagick) which need to be compiled from source with the developer tools. The solution to these problems is to install the <a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit" title="Development Kit - GitHub">Development Kit</a> provided by the RubyInstaller project: the Ruby DevKit for Windows is based upon <a href="http://www.mingw.org/" title="Minimalist GNU for Windows">MSYS and MinGW</a>, which not only provide development tools to build native Ruby extensions or &ldquo;gem&rdquo;, but also include the Bash command line interpreter system. This allows Windows users to run the same[^9] Homer bash script inside Windows Command Prompt.</p>
 
 <p>The installer copy most of the software in an newly created <code>C:\opt</code> folder (except Scan Tailor which is installed in the default <code>C:\Program Files</code>). This is necessary because the command-line utilities work easily if they reside in a path without spaces.</p>
 
-<p>Finally, the script also update the <code>%PATH%</code> environmental variable to include all the folders in C:\opt that contains binaries, thus making their execution smoother. Moreover, another variable is added to the registry for the current user: it&#8217;s called <code>%DESKTOPDIR%</code>, and returns the path to the user&#8217;s Desktop directory (e.g., <code>C:\Documents and Settings\cosimolupo\Desktop</code>). The latter is used by the Homer script to save the final PDF document in that location. It is simply trick to overcome the issue of Windows system folders&#8217; labels being dependent from the language currently in use: thus, the same folder is called &#8220;Desktop&#8221; in the English version, while &#8220;Scrivania&#8221; in the Italian one.</p>
+<p>Finally, the script also update the <code>%PATH%</code> environmental variable to include all the folders in C:\opt that contains binaries, thus making their execution smoother. Moreover, another variable is added to the registry for the current user: it&rsquo;s called <code>%DESKTOPDIR%</code>, and returns the path to the user&rsquo;s Desktop directory (e.g., <code>C:\Documents and Settings\cosimolupo\Desktop</code>). The latter is used by the Homer script to save the final PDF document in that location. It is simply trick to overcome the issue of Windows system folders&rsquo; labels being dependent from the language currently in use: thus, the same folder is called &ldquo;Desktop&rdquo; in the English version, while &ldquo;Scrivania&rdquo; in the Italian one. </p>
 
-<p>If you have already installed any of the following programs, and still wish to use the automatic installer, we advise you to uninstall all those programs before running the automated installation script, in order to avoid any possible conflict. Otherwise, it is better to install all the applications manually and then download the standalone Homer bash script from <a href='http://dl.dropbox.com/u/189038/homer.sh' title='Homer bash script v1.0beta1'>here</a>.</p>
+<p>If you have already installed any of the following programs, and still wish to use the automatic installer, we advise you to uninstall all those programs before running the automated installation script, in order to avoid any possible conflict. Otherwise, it is better to install all the applications manually and then download the standalone Homer bash script from <a href="http://dl.dropbox.com/u/189038/homer.sh" title="Homer bash script v1.0beta1">here</a>.</p>
 
-<h3 id='software_included'>Software included</h3>
+<h3 id="software-included-1">Software included</h3>
 
 <p>The script install the following programs into the specified locations:</p>
 
 <ul>
-<li>
-<p><a href='http://www.imagemagick.org/script/index.php' title='ImageMagick.org'><strong>ImageMagick</strong></a>, open source software suite for manipulating images (official Windows binary installer version 6.7.0-10-Q16):</p>
+  <li>
+    <p><a href="http://www.imagemagick.org/script/index.php" title="ImageMagick.org"><strong>ImageMagick</strong></a>, open source software suite for manipulating images (official Windows binary installer version 6.7.0-10-Q16): </p>
 
-<pre><code>  C:\opt\ImageMagick\</code></pre>
-</li>
+    <pre><code>  C:\opt\ImageMagick\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://jpegclub.org/" title="JPEGClub.org"><strong>jpegtran</strong></a>, loseless jpeg transformations (as found inside the GNUWin32 build of <a href="http://gnuwin32.sourceforge.net/packages/jpeg.htm" title="Jpeg for Windows">JPEG 6b-4</a> library for Windows):</p>
 
-<li>
-<p><a href='http://jpegclub.org/' title='JPEGClub.org'><strong>jpegtran</strong></a>, loseless jpeg transformations (as found inside the GNUWin32 build of <a href='http://gnuwin32.sourceforge.net/packages/jpeg.htm' title='Jpeg for Windows'>JPEG 6b-4</a> library for Windows):</p>
+    <pre><code>  C:\opt\bin\jpegtran.exe
+  C:\opt\bin\jpeg62.dll
+</code></pre>
+  </li>
+  <li>
+    <p><a href="https://github.com/agl/jbig2enc" title="agl/jbig2enc - GitHub"><strong>JBIG2 encoder</strong></a>, compression tool for bi-level images (Windows version of agl&rsquo;s jbig2enc compiled by <a href="http://soft.rubypdf.com/software/windows-version-jbig2-encoder-jbig2-exe" title="Windows verson of JBIG2 Encoder">RubyPDF software</a>):</p>
 
-<pre><code>  C:\opt\bin\jpegtran.exe
-  C:\opt\bin\jpeg62.dll</code></pre>
-</li>
+    <pre><code>  C:\opt\bin\jbig2.exe
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://code.google.com/p/tesseract-ocr/" title="Tesseract OCR"><strong>Tesseract-ORC</strong></a>, free open source OCR engine sponsored by Google, with Leptonica library for enhanced image processing (version 3.00): </p>
 
-<li>
-<p><a href='https://github.com/agl/jbig2enc' title='agl/jbig2enc - GitHub'><strong>JBIG2 encoder</strong></a>, compression tool for bi-level images (Windows version of agl&#8217;s jbig2enc compiled by <a href='http://soft.rubypdf.com/software/windows-version-jbig2-encoder-jbig2-exe' title='Windows verson of JBIG2 Encoder'>RubyPDF software</a>):</p>
+    <pre><code>  C:\opt\Tesseract-OCR\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rubyinstaller.org/" title="RubyInstaller of Windows"><strong>RubyInstaller</strong></a>, the easy way to install the Ruby programming language on Windows (includes the Development Kit to build native C/C++ extensions or &ldquo;gems&rdquo; - Ruby version 1.87):</p>
 
-<pre><code>  C:\opt\bin\jbig2.exe</code></pre>
-</li>
+    <pre><code>  C:\opt\Ruby187\
+  C:\opt\DevKit\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rubygems.org/gems/hpricot" title="Hpricot | RubyGems.org"><strong>Hpricot</strong></a>, HTML parser:</p>
 
-<li>
-<p><a href='http://code.google.com/p/tesseract-ocr/' title='Tesseract OCR'><strong>Tesseract-ORC</strong></a>, free open source OCR engine sponsored by Google, with Leptonica library for enhanced image processing (version 3.00):</p>
+    <pre><code>  C:\opt\Ruby187\lib\ruby\gems\1.8\gems\hpricot-0.8.4\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rmagick.rubyforge.org/" title="RMagick Download Page"><strong>RMagick</strong></a>, interface between the Ruby programming language and ImageMagick:	</p>
 
-<pre><code>  C:\opt\Tesseract-OCR\</code></pre>
-</li>
+    <pre><code>  C:\opt\Ruby187\lib\ruby\gems\1.8\gems\rmagick-2.13.1\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://rubygems.org/gems/pdfbeads" title="PDFbeads | RubyGems.org"><strong>pdfbeads</strong></a>, Ruby utility to create searchable PDF:</p>
 
-<li>
-<p><a href='http://rubyinstaller.org/' title='RubyInstaller of Windows'><strong>RubyInstaller</strong></a>, the easy way to install the Ruby programming language on Windows (includes the Development Kit to build native C/C++ extensions or &#8220;gems&#8221; - Ruby version 1.87):</p>
+    <pre><code>  C:\opt\Ruby187\lib\ruby\gems\1.8\gems\pdfbeads-1.0.3\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://www.commandline.co.uk/cmdow/" title="CMDOW Commandline Windows Utility for NT4/2000/XP/2003"><strong>cmdow.exe</strong></a>, command-line utility used in Homer batch script to activate the Command Prompt window upon completion:</p>
 
-<pre><code>C:\opt\Ruby187\
-C:\opt\DevKit\</code></pre>
-</li>
+    <pre><code>  C:\opt\bin\cmdow.exe
+</code></pre>
+  </li>
+  <li>
+    <p><a href="http://scantailor.sourceforge.net/" title="About | Scan Tailor"><strong>Scan Tailor</strong></a>, interactive post-processing tool for scanned pages (version 1.0.0beta11 with experimental &ldquo;Dewarping&rdquo; support):</p>
 
-<li>
-<p><a href='http://rubygems.org/gems/hpricot' title='Hpricot | RubyGems.org'><strong>Hpricot</strong></a>, HTML parser:</p>
+    <pre><code>  C:\Program Files\ScanTailor\
+</code></pre>
+  </li>
+  <li>
+    <p><a href="/how-to-process-the-images"><strong>Homer</strong></a>, command-line bash script (controlled via a Windows batch file) for renaming, rotating and binding scanned pages:</p>
 
-<pre><code>  C:\opt\Ruby187\lib\ruby\gems\1.8\gems\hpricot-0.8.4\</code></pre>
-</li>
-
-<li>
-<p><a href='http://rmagick.rubyforge.org/' title='RMagick Download Page'><strong>RMagick</strong></a>, interface between the Ruby programming language and ImageMagick:</p>
-
-<pre><code>  C:\opt\Ruby187\lib\ruby\gems\1.8\gems\rmagick-2.13.1\</code></pre>
-</li>
-
-<li>
-<p><a href='http://rubygems.org/gems/pdfbeads' title='PDFbeads | RubyGems.org'><strong>pdfbeads</strong></a>, Ruby utility to create searchable PDF:</p>
-
-<pre><code>C:\opt\Ruby187\lib\ruby\gems\1.8\gems\pdfbeads-1.0.3\</code></pre>
-</li>
-
-<li>
-<p><a href='http://www.commandline.co.uk/cmdow/' title='CMDOW Commandline Windows Utility for NT4/2000/XP/2003'><strong>cmdow.exe</strong></a>, command-line utility used in Homer batch script to activate the Command Prompt window upon completion:</p>
-
-<pre><code>  C:\opt\bin\cmdow.exe</code></pre>
-</li>
-
-<li>
-<p><a href='http://scantailor.sourceforge.net/' title='About | Scan Tailor'><strong>Scan Tailor</strong></a>, interactive post-processing tool for scanned pages (version 1.0.0beta11 with experimental &#8220;Dewarping&#8221; support):</p>
-
-<pre><code>  C:\Program Files\ScanTailor\</code></pre>
-</li>
-
-<li>
-<p><a href='/how-to-process-the-images'><strong>Homer</strong></a>, command-line bash script (controlled via a Windows batch file) for renaming, rotating and binding scanned pages:</p>
-
-<pre><code>C:\opt\bin\homer.cmd
-C:\opt\bin\homer.sh
-C:\Program Files\Homer\Homer.bat</code></pre>
-</li>
+    <pre><code>  C:\opt\bin\homer.cmd
+  C:\opt\bin\homer.sh
+  C:\Program Files\Homer\Homer.bat
+</code></pre>
+  </li>
 </ul>
+
+
 </div>
 <div id="footer">
 	<a href="http://jekyllrb.com/">jekyll</a> rules!
