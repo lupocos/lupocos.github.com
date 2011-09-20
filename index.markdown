@@ -4,11 +4,12 @@ title: Home
 ---
 
 Homer is a package of hardware and software that provides an inexpensive and efficient solution to scan books. 
-
-<iframe src="http://player.vimeo.com/video/28263829?title=0&amp;byline=0&amp;portrait=0" width="400" height="220" frameborder="0" webkitAllowFullScreen allowFullScreen> </iframe>
- 
-<p><a href="http://vimeo.com/28263829">Homer, a nod to the Gutenberg press</a> from <a href="http://vimeo.com/sojournposse">Sojournposse</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-
+<p>
+	<iframe src="http://player.vimeo.com/video/28263829?title=0&amp;byline=0&amp;portrait=0" width="400" height="220" frameborder="0" webkitallowfullscreen="" allowfullscreen=""></iframe>
+</p>
+<p>
+	<a href="http://vimeo.com/28263829">Homer, a nod to the Gutenberg press</a> from <a href="http://vimeo.com/sojournposse">Sojournposse</a> on <a href="http://vimeo.com">Vimeo</a>.
+</p>
 
 The "prototype" is based on a [previous model][1] developed by [Daniel Reetz][3] and [Matti Kariluoma][4]. Dan is also the founder of an online community of hackers sharing their knowledge and passion for [do-it-yourself book scanning][2], which is where we drew most of our original inspiration.
 

@@ -5,16 +5,15 @@ title: How to build Homer
 
 # How to build the prototype #
 
-<object width="400" height="300"> <param name="flashvars"
-value="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2Fshow%2F&page_show_back_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2F&set_id=72157626888709956&jump_to="></param>
-<param name="movie"
-value="http://www.flickr.com/apps/slideshow/show.swf?v=104087"></param>
-<param name="allowFullScreen" value="true"></param><embed
-type="application/x-shockwave-flash"
-src="http://www.flickr.com/apps/slideshow/show.swf?v=104087"
-allowFullScreen="true"
-flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2Fshow%2F&page_show_back_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2F&set_id=72157626888709956&jump_to="
-width="518" height="389"></embed></object>
+<p>
+	<object width="400" height="300">
+		<param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2F&amp;set_id=72157626888709956&amp;jump_to=">
+		<param name="movie" value="http://www.flickr.com/apps/slideshow/show.swf?v=104087">
+		<param name="allowFullScreen" value="true">
+		<embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=104087" allowfullscreen="true" flashvars="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2Fshow%2F&amp;page_show_back_url=%2Fphotos%2Fspyer%2Fsets%2F72157626888709956%2F&amp;set_id=72157626888709956&amp;jump_to=" width="518" height="389">
+	</object>
+</p>
+
 
 There is not much your need to know about how to build the prototype than what you see in the pictures above. Simply cut a cardboard box in half (preferably cube shaped), use duct tape to attach a small camera tripod to one of the edges, and extract a piece of glass from a picture frame -- you will need that to flatten the paper while scanning. Finally, position a desk lamp at the opposite side of the camera in order to light up the paper surface without producing glare on the glass. We used our own compact digital camera (10 Mpx), obtaining surprisingly good results. In the end, the only things we had to buy were the picture frame and the tripod, for total £2 at Poundland store. 
 

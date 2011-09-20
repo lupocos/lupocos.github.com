@@ -4,7 +4,10 @@ title: About this project
 ---
 # About this project #
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/UHmkgcuHZ8Q" frameborder="0" allowfullscreen> </iframe>
+<p>
+	<iframe width="560" height="315" src="http://www.youtube.com/embed/UHmkgcuHZ8Q" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
 
 Office scanners are made to copy office papers, not books. It is hard to fit correctly a book page and you also risk damaging the book.
 
