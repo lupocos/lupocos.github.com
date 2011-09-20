@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Homer, the DIY Book Scanner - How to copy a book</title>
+	<link rel="stylesheet" href="/css/styles.css" type="text/css" charset="utf-8">
+</head>
+<body>
+<div id="header">
+	<div id="site_title"><h1>Homer, the DIY Book Scanner</h1></div>
+</div>
+<div id="content">
+	<h1 id='how_to_copy_a_book'>How to copy a book</h1>
+
+<p>Place the book in the center of the cardboard box, so that the pages to be scanned are parallel to the camera&#8217;s lens. Depending on the shape of your box, you may need to put some stuff under one end of the scanner to correct its inclination.</p>
+
+<p>Pay attention to the position of the light in order to avoid any glare on the glass. If your digital camera supports it, try to adjust the <a href='http://en.wikipedia.org/wiki/Color_balance' title='Color Balance (from Wikipedia'>white balance</a> to attain the best possible colours. Many cameras include a range of presets that cover common lighting conditions. For example, our cheap desk lamp turns out to be &#8220;incandescent&#8221; (hopefully not!).</p>
+
+<p>The normal procedure is to start taking pictures from the pages on the right-hand side, then turn the book and scan the remaining left-hand pages. Thus, if you plan to scan the whole book, you can start from the cover, proceed until the end of the book, and then you rotate the book 180 degrees and scan the rest. Alternatively &#8211; say you want to scan only a section of the book, or the book you want to scan is written in Japanese &#8211;, you can choose to start scanning from the left-hand pages. There is an option on the Homer script that lets you choose whether the first half of the pictures must be treated as right-hand or left-hand pages. This is important to know because the two sets of pictures require different actions: right-hand pages must be rotated 90 degrees clockwise, while left-hand pages 90 degrees counterclockwise.</p>
+
+<p>The best way to make sure that the script won&#8217;t fail in renaming and rotating the photos is to follow these two simple rules, however stupid they might sound at first:</p>
+
+<ol>
+<li><strong>Take a total even number of pages (2n)</strong>, regardless of whether the first half consists in right- or left-hand ones;</li>
+
+<li><strong>Never take the same page twice, and don&#8217;t skip any page, not even blank ones</strong> &#8211; you can delete unwanted pages after the renaming step is done.</li>
+</ol>
+
+<p>Thus, for each scanned page there must always be another one following it. They must always go in pairs, be they <code>right + left</code> or <code>left + right</code>. So, if you scanned the right-hand pages first, you should proceed scanning from the <em>next</em> left-hand page <em>immediately following</em> the first picture, or viceversa. For example, if the first page you scanned is the front cover, then when you turn the book and take the second set you should begin with the inside of the cover page, i.e., the &#8220;front endpaper&#8221;.</p>
+
+<p>The reason is that, to reorder the set of scanned pages, the script gives each image file a number with an increment of two, so that the first half is given odd incremental numbers (0001, 0003, 0005, 0007, etc.), while the second half receives even numbers (0002, 0004, 0006, 0008, etc.). Therefore, if the total number is not even, the script may end up skipping some photos.</p>
+
+<p>Computers are stupid, but humans too make mistakes, especially when taking hundreds of pictures in a row. It is a good idea to check that there aren&#8217;t any duplicates or missing pages before feeding the beast. If you realize that there are indeed duplicates or missing pages, you have to delete the former, and rename the latter so that they will be placed in the correct alpha-numeric position. For example, you can append a letter to the interpolated image&#8217;s filename: DSC2139, DSC2140, DSC2140<em>a</em>, DSC2141, etc.</p>
+</div>
+<div id="footer">
+	<a href="http://jekyllrb.com/">jekyll</a> rules!
+</div>
+</body>
+</html>
