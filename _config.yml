@@ -3,5 +3,5 @@ auto: true
 pygments: true
 source: .
 destination: ./_site
-markdown: maruku
+markdown: kramdown
 
